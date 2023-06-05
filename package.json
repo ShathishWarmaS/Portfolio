@@ -1,0 +1,15 @@
+{
+  "name": "resumepro",
+  "version": "1.0.0",
+  "description": "reusme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shathish",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "pdfkit": "^0.13.0"
+  }
+}
