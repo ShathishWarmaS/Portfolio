@@ -7,7 +7,7 @@ import Projects from "./components/Projects/Projects";
 import Experience from "./components/Experience/Experience";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
-import ParticleBackground from "./components/3D/ParticleBackground";
+// import ParticleBackground from "./components/3D/ParticleBackground";
 import {
   BrowserRouter as Router,
   Route,
@@ -34,7 +34,7 @@ function App() {
     <Router>
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
-        <ParticleBackground />
+        {/* <ParticleBackground /> */}
         <Navbar />
         <ScrollToTop />
         <Routes>

@@ -610,6 +610,14 @@ button:focus {
   color: white !important;
 }
 
+.experience-section {
+  position: relative !important;
+  padding-top: 150px !important;
+  padding-bottom: 30px !important;
+  background-image: var(--section-background-color) !important;
+  color: white !important;
+}
+
 .resume {
   padding-top: 50px;
   padding-bottom: 50px;

@@ -1,10 +1,10 @@
 import React, { useCallback } from "react";
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
+import Particles from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
 
 const ParticleBackground = () => {
   const particlesInit = useCallback(async (engine) => {
-    await loadFull(engine);
+    await loadSlim(engine);
   }, []);
 
   const particlesLoaded = useCallback(async (container) => {
@@ -47,7 +47,7 @@ const ParticleBackground = () => {
         },
         particles: {
           color: {
-            value: ["#c084f5", "#3b82f6", "#06b6d4", "#10b981", "#f59e0b"],
+            value: "#c084f5",
           },
           links: {
             color: "#c084f5",
@@ -55,9 +55,6 @@ const ParticleBackground = () => {
             enable: true,
             opacity: 0.3,
             width: 1,
-          },
-          collisions: {
-            enable: true,
           },
           move: {
             direction: "none",
@@ -74,7 +71,7 @@ const ParticleBackground = () => {
               enable: true,
               area: 800,
             },
-            value: 80,
+            value: 60,
           },
           opacity: {
             value: 0.5,
@@ -87,13 +84,10 @@ const ParticleBackground = () => {
             },
           },
           shape: {
-            type: ["circle", "triangle", "polygon"],
-            polygon: {
-              sides: 6,
-            },
+            type: "circle",
           },
           size: {
-            value: { min: 1, max: 5 },
+            value: { min: 1, max: 3 },
             animation: {
               enable: true,
               speed: 2,
