@@ -1,0 +1,256 @@
+/* 3D Project Card Animations */
+.project-card-3d-container {
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.project-card-3d {
+  position: relative;
+  background: linear-gradient(145deg, 
+    rgba(255, 255, 255, 0.1), 
+    rgba(255, 255, 255, 0.05)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+  backdrop-filter: blur(10px);
+  box-shadow: 
+    0 10px 40px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(192, 132, 245, 0.1);
+  animation: cardFloat 6s ease-in-out infinite;
+}
+
+.project-card-3d:hover {
+  transform: translateY(-10px) rotateX(5deg);
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    0 0 40px rgba(192, 132, 245, 0.3);
+}
+
+.project-card-3d-image {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+  transform: translateZ(20px);
+}
+
+.project-card-3d:hover .project-image {
+  transform: translateZ(20px) scale(1.1);
+}
+
+.project-card-3d-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(192, 132, 245, 0.3) 0%,
+    rgba(59, 130, 246, 0.3) 50%,
+    rgba(16, 185, 129, 0.3) 100%
+  );
+  opacity: 0;
+  transition: all 0.3s ease;
+  transform: translateZ(30px);
+}
+
+.project-card-3d:hover .project-card-3d-overlay {
+  opacity: 1;
+}
+
+.project-card-3d-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.overlay-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0;
+  animation: overlayParticleFloat 3s ease-in-out infinite;
+}
+
+.particle-0 { top: 10%; left: 10%; animation-delay: 0s; }
+.particle-1 { top: 20%; right: 10%; animation-delay: 0.3s; }
+.particle-2 { bottom: 20%; left: 20%; animation-delay: 0.6s; }
+.particle-3 { bottom: 10%; right: 20%; animation-delay: 0.9s; }
+.particle-4 { top: 60%; left: 15%; animation-delay: 1.2s; }
+.particle-5 { top: 40%; right: 15%; animation-delay: 1.5s; }
+.particle-6 { bottom: 40%; left: 80%; animation-delay: 1.8s; }
+.particle-7 { top: 80%; right: 80%; animation-delay: 2.1s; }
+
+.project-card-3d-body {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  transform: translateZ(15px);
+}
+
+.project-card-3d-title {
+  color: #c084f5;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.project-card-3d:hover .project-card-3d-title {
+  color: #fff;
+  transform: translateZ(5px);
+}
+
+.project-card-3d-description {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.project-card-3d:hover .project-card-3d-description {
+  color: #fff;
+  transform: translateZ(3px);
+}
+
+.project-card-3d-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-btn-3d {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  transform: translateZ(10px);
+  background: linear-gradient(45deg, #c084f5, #3b82f6);
+  border: none;
+  box-shadow: 0 4px 15px rgba(192, 132, 245, 0.3);
+}
+
+.project-btn-3d:hover {
+  transform: translateZ(15px) translateY(-2px);
+  box-shadow: 0 8px 25px rgba(192, 132, 245, 0.5);
+  background: linear-gradient(45deg, #a855f7, #2563eb);
+}
+
+.demo-btn {
+  background: linear-gradient(45deg, transparent, transparent);
+  border: 2px solid #c084f5;
+  color: #c084f5;
+}
+
+.demo-btn:hover {
+  background: linear-gradient(45deg, #c084f5, #3b82f6);
+  color: #fff;
+  border-color: #c084f5;
+}
+
+.btn-icon {
+  font-size: 1rem;
+}
+
+.project-card-3d-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(circle, rgba(192, 132, 245, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) translateZ(-20px);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.project-card-3d:hover .project-card-3d-glow {
+  opacity: 1;
+  transform: translate(-50%, -50%) translateZ(-20px) scale(1.2);
+}
+
+.project-card-3d-reflection {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  height: 50%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    transparent 50%
+  );
+  border-radius: 15px;
+  transform: translateZ(25px);
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+.project-card-3d:hover .project-card-3d-reflection {
+  opacity: 0.6;
+}
+
+/* Keyframe Animations */
+@keyframes cardFloat {
+  0%, 100% { transform: translateY(0px) rotateX(0deg); }
+  50% { transform: translateY(-5px) rotateX(2deg); }
+}
+
+@keyframes overlayParticleFloat {
+  0% { 
+    opacity: 0; 
+    transform: translateY(0px) scale(0); 
+  }
+  50% { 
+    opacity: 1; 
+    transform: translateY(-15px) scale(1); 
+  }
+  100% { 
+    opacity: 0; 
+    transform: translateY(-30px) scale(0); 
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project-card-3d-title {
+    font-size: 1.1rem;
+  }
+  
+  .project-card-3d-description {
+    font-size: 0.9rem;
+  }
+  
+  .project-btn-3d {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+  
+  .project-card-3d-image {
+    height: 180px;
+  }
+}

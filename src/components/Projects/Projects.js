@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
+import ProjectCard3D from "../3D/ProjectCard3D";
 import Particle from "../Particle";
 import leaf from "../../Assets/Projects/leaf.png";
 import emotion from "../../Assets/Projects/emotion.png";
@@ -15,76 +16,73 @@ function Projects() {
       <Particle />
       <Container>
         <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
+          My Recent <strong className="purple">MLOps & Cloud Projects </strong>
         </h1>
         <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
+          Here are some key MLOps and cloud infrastructure projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
-            <ProjectCard
+            <ProjectCard3D
               imgPath={chatify}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              title="GenAI SaaS Platform - Qubrid AI"
+              description="Built SaaS platform for AI compute with GPU provisioning (H100, A100, V100). Integrated GenAI models like Mistral, Gemma, Stable Diffusion, and Hugging Face transformers. Deployed on Google Cloud Run and AWS SageMaker with automated scaling and cost tracking."
+              ghLink="https://github.com/shathishwarmas"
+              demoLink="https://shathishwarmas.github.io/Portfolio/"
             />
           </Col>
 
           <Col md={4} className="project-card">
-            <ProjectCard
+            <ProjectCard3D
               imgPath={bitsOfCode}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              title="MLOps Pipeline with GPU Orchestration"
+              description="Automated ML model training, inference, and monitoring pipelines using AWS SageMaker, EKS, and custom GPU clusters. Implemented model versioning, A/B testing, and automated retraining. Reduced model deployment time from days to minutes with 99.9% uptime."
+              ghLink="https://github.com/shathishwarmas"
+              demoLink="https://shathishwarmas.github.io/Portfolio/"
             />
           </Col>
 
           <Col md={4} className="project-card">
-            <ProjectCard
+            <ProjectCard3D
               imgPath={editor}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              title="AWS Quantum Computing with Braket"
+              description="Ran quantum simulations using AWS Braket with both simulators and real QPUs. Built quantum-classical hybrid workflows, implemented quantum algorithms, and integrated with classical ML pipelines. Explored quantum advantage for optimization problems."
+              ghLink="https://github.com/shathishwarmas"
+              demoLink="https://shathishwarmas.github.io/Portfolio/"              
             />
           </Col>
 
           <Col md={4} className="project-card">
-            <ProjectCard
+            <ProjectCard3D
               imgPath={leaf}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
+              title="Multi-Cloud EKS/GKE Migration"
+              description="Migrated infrastructure from GCP to AWS with minimal downtime at ePaisa. Created EKS clusters with Helm, CloudFormation, ECR, and S3 integration. Deployed Flutter/web applications using Jenkins CI/CD and ECS Fargate with zero-downtime deployments."
+              ghLink="https://github.com/shathishwarmas"
+              demoLink="https://shathishwarmas.github.io/Portfolio/"
             />
           </Col>
 
           <Col md={4} className="project-card">
-            <ProjectCard
+            <ProjectCard3D
               imgPath={suicide}
               isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
+              title="Automated EC2 Lifecycle Management"
+              description="Built automated EC2 instance control using Boto3 for start, stop, and resume operations. Implemented cost optimization strategies with auto-scaling, spot instances, and usage dashboards. Achieved 30% cost reduction while maintaining performance."
+              ghLink="https://github.com/shathishwarmas"
             />
           </Col>
 
           <Col md={4} className="project-card">
-            <ProjectCard
+            <ProjectCard3D
               imgPath={emotion}
               isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
+              title="Production LAMP Stack with Monitoring"
+              description="Managed production LAMP stack with optimized NGINX configuration, SSL/TLS, and RBAC implementation. Set up comprehensive monitoring with CloudWatch, Datadog, and custom dashboards. Fixed session stickiness issues and improved application performance by 40%."
+              ghLink="https://github.com/shathishwarmas"
             />
           </Col>
         </Row>

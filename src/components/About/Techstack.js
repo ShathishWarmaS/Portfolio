@@ -1,52 +1,64 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import { CgCPlusPlus } from "react-icons/cg";
-import {
-  DiJavascript1,
-  DiReact,
-  DiNodejs,
-  DiMongodb,
+import { 
   DiPython,
   DiGit,
+  DiLinux,
+  DiDocker,
 } from "react-icons/di";
 import {
+  SiAmazonaws,
+  SiKubernetes,
+  SiTerraform,
+  SiJenkins,
+  SiPrometheus,
+  SiGrafana,
+  SiTensorflow,
   SiPytorch,
+  SiGooglecloud,
+  SiNvidia,
+  SiPython,
   SiFirebase,
-  SiNextdotjs,
 } from "react-icons/si";
 
 function Techstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">
-        <CgCPlusPlus />
+        <SiAmazonaws />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiJavascript1 />
+        <SiGooglecloud />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiNodejs />
+        <SiKubernetes />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiReact />
+        <DiDocker />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiMongodb />
+        <SiTensorflow />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiNextdotjs />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiGit />
+        <SiPytorch />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiFirebase />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
+        <SiNvidia />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
         <DiPython />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiPytorch />
+        <SiTerraform />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiJenkins />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <DiGit />
       </Col>
     </Row>
   );
