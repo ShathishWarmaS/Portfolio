@@ -14,6 +14,53 @@
 </head>
 
 <body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader">
+      <div class="loader-inner">
+        <div class="loader-line-wrap">
+          <div class="loader-line"></div>
+        </div>
+        <div class="loader-line-wrap">
+          <div class="loader-line"></div>
+        </div>
+        <div class="loader-line-wrap">
+          <div class="loader-line"></div>
+        </div>
+        <div class="loader-line-wrap">
+          <div class="loader-line"></div>
+        </div>
+        <div class="loader-line-wrap">
+          <div class="loader-line"></div>
+        </div>
+      </div>
+      <div class="loader-text">Loading Portfolio...</div>
+    </div>
+  </div>
+
+  <!-- Particle System Canvas -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Floating Action Button -->
+  <div class="fab-container">
+    <button class="fab" id="main-fab">
+      <i data-feather="menu"></i>
+    </button>
+    <div class="fab-options">
+      <a href="./ShathishWWarma_LLMOPS.pdf" download class="fab-option" title="Download Resume">
+        <i data-feather="download"></i>
+      </a>
+      <a href="mailto:ShathishWarma@gmail.com" class="fab-option" title="Send Email">
+        <i data-feather="mail"></i>
+      </a>
+      <a href="https://github.com/ShathishWarmaS/" target="_blank" class="fab-option" title="GitHub">
+        <i data-feather="github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/shathish-warma-s/" target="_blank" class="fab-option" title="LinkedIn">
+        <i data-feather="linkedin"></i>
+      </a>
+    </div>
+  </div>
   <div class="container">
     <div class="profile">
       <div class="profile_container">
@@ -23,9 +70,9 @@
         <div>
           <h1 class="profile_name">
             <span class="profile_name_firstName"></span>
-            <span class="profile_name_lastName">SHATHISH WARMA S</span>
+            <span class="profile_name_lastName" id="typing-name">SHATHISH WARMA S</span>
           </h1>
-          <p class="profile_title">Cloud DevOps & MLOps Engineer</p>
+          <p class="profile_title" id="typing-title">Cloud DevOps & MLOps Engineer</p>
           <p class="description profile_description">
             Cloud DevOps and MLOps Engineer with 3 years of hands-on experience in architecting and managing scalable, cloud-native infrastructures across AWS and GCP. Specialized in automating CI/CD pipelines, orchestrating Kubernetes clusters, and deploying GenAI/LLM models in production. Strong background in Infrastructure-as-Code (IaC), GPU computing optimization, and building hybrid CPU/GPU/Quantum computing platforms. Proficient in MLOps workflows, model serving, and real-time AI inference systems. Passionate about automation, observability, and delivering high-performance computing solutions.
           </p>
@@ -38,18 +85,114 @@
       <div class="skills">
         <h3 class="title">Core Expertise</h3>
         <ul class="skills_list description">
-          <li><strong>Cloud Platforms:</strong> AWS, GCP, Azure</li>
-          <li><strong>Container Orchestration:</strong> Kubernetes, Docker, Helm</li>
-          <li><strong>Infrastructure as Code:</strong> Terraform, CloudFormation</li>
-          <li><strong>CI/CD:</strong> Jenkins, GitHub Actions, GitLab CI</li>
-          <li><strong>MLOps & AI:</strong> TensorFlow, PyTorch, Hugging Face</li>
-          <li><strong>Model Serving:</strong> SageMaker, Vertex AI, MLflow</li>
-          <li><strong>GPU Computing:</strong> NVIDIA H100, A100, V100</li>
-          <li><strong>Monitoring:</strong> Prometheus, Grafana, CloudWatch</li>
-          <li><strong>Programming:</strong> Python, Bash, Go</li>
-          <li><strong>Databases:</strong> MongoDB, PostgreSQL, Redis</li>
-          <li><strong>Service Mesh:</strong> Istio, Envoy</li>
-          <li><strong>Security:</strong> RBAC, OAuth, SSL/TLS</li>
+          <li class="skill-item">
+            <div class="skill-header">
+              <strong>Cloud Platforms:</strong> AWS, GCP, Azure
+              <span class="skill-level">95%</span>
+            </div>
+            <div class="skill-progress">
+              <div class="skill-bar" data-skill="95"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <div class="skill-header">
+              <strong>Container Orchestration:</strong> Kubernetes, Docker, Helm
+              <span class="skill-level">92%</span>
+            </div>
+            <div class="skill-progress">
+              <div class="skill-bar" data-skill="92"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <div class="skill-header">
+              <strong>Infrastructure as Code:</strong> Terraform, CloudFormation
+              <span class="skill-level">90%</span>
+            </div>
+            <div class="skill-progress">
+              <div class="skill-bar" data-skill="90"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <div class="skill-header">
+              <strong>CI/CD:</strong> Jenkins, GitHub Actions, GitLab CI
+              <span class="skill-level">88%</span>
+            </div>
+            <div class="skill-progress">
+              <div class="skill-bar" data-skill="88"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <div class="skill-header">
+              <strong>MLOps & AI:</strong> TensorFlow, PyTorch, Hugging Face
+              <span class="skill-level">85%</span>
+            </div>
+            <div class="skill-progress">
+              <div class="skill-bar" data-skill="85"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <div class="skill-header">
+              <strong>Model Serving:</strong> SageMaker, Vertex AI, MLflow
+              <span class="skill-level">87%</span>
+            </div>
+            <div class="skill-progress">
+              <div class="skill-bar" data-skill="87"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <div class="skill-header">
+              <strong>GPU Computing:</strong> NVIDIA H100, A100, V100
+              <span class="skill-level">82%</span>
+            </div>
+            <div class="skill-progress">
+              <div class="skill-bar" data-skill="82"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <div class="skill-header">
+              <strong>Monitoring:</strong> Prometheus, Grafana, CloudWatch
+              <span class="skill-level">89%</span>
+            </div>
+            <div class="skill-progress">
+              <div class="skill-bar" data-skill="89"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <div class="skill-header">
+              <strong>Programming:</strong> Python, Bash, Go
+              <span class="skill-level">91%</span>
+            </div>
+            <div class="skill-progress">
+              <div class="skill-bar" data-skill="91"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <div class="skill-header">
+              <strong>Databases:</strong> MongoDB, PostgreSQL, Redis
+              <span class="skill-level">84%</span>
+            </div>
+            <div class="skill-progress">
+              <div class="skill-bar" data-skill="84"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <div class="skill-header">
+              <strong>Service Mesh:</strong> Istio, Envoy
+              <span class="skill-level">78%</span>
+            </div>
+            <div class="skill-progress">
+              <div class="skill-bar" data-skill="78"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <div class="skill-header">
+              <strong>Security:</strong> RBAC, OAuth, SSL/TLS
+              <span class="skill-level">86%</span>
+            </div>
+            <div class="skill-progress">
+              <div class="skill-bar" data-skill="86"></div>
+            </div>
+          </li>
         </ul>
       </div>
 
@@ -247,7 +390,6 @@
             <li><strong>Performance:</strong> Improved ML model inference speed by 3x using optimized GPU utilization</li>
             <li><strong>Scalability:</strong> Successfully scaled applications from 100 to 10,000+ concurrent users</li>
             <li><strong>Security:</strong> Implemented zero-trust security model with 100% compliance audit success</li>
-            <li><strong>Innovation:</strong> Filed 2 patents for hybrid cloud-quantum computing architectures</li>
           </ul>
         </p>
       </div>
@@ -287,6 +429,7 @@
   <script>
     feather.replace();
   </script>
+  <script src="portfolio.js"></script>
 </body>
 
 </html>
